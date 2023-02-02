@@ -1,1 +1,1 @@
-# 1MonthPreparationKitHackerRank
+# 1 Month Preparation Kit HackerRank
