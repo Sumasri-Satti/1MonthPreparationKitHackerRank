@@ -1,0 +1,39 @@
+1. Find The Median
+
+class Result {
+/*
+* Complete the 'findMedian' function below.
+*
+* The function is expected to return an INTEGER.
+* The function accepts INTEGER_ARRAY arr as parameter.
+*/
+  public static int findMedian(List<Integer> arr) {
+  // Write your code here
+    Collections.sort(arr);
+    int n=arr.size()/2;
+    return arr.get(n);
+  }
+}
+
+2. Flipping The Matrix
+
+class Result {
+/*
+* Complete the 'flippingMatrix' function below.
+*
+* The function is expected to return an INTEGER6
+The function is expected to return an INTEGER.
+* The function accepts 2D_INTEGER_ARRAY matrix as parameter.
+*/
+  public static int flippingMatrix(List<List<Integer>> matrix) {
+// Write your code here
+    int n=matrix.size()/2,s=0;
+    for(int i=0;i<n;i++){
+      for(int j=0;j<n;j++){
+        s+=Math.max(Math.max(matrix.get(i).get(j),matrix.get(i).get(2*n-j-1)),
+        Math.max(matrix.get(2*n-i-1).get(j),matrix.get(2*n-i-1).get(2*n-j-1)));
+        }
+    }
+    return s;
+ }
+}
